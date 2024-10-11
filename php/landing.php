@@ -1,4 +1,5 @@
-/**
+<!--
+/*
  * This is the landing page for the Delaware Temperature Data Comparison application.
  * 
  * The page displays a comparison of temperature data between the years 1950 - 2018 and the year 2018.
@@ -24,6 +25,7 @@
  * 
  * @see test.php Logic file for temperature comparison data
  */
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +34,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delaware Temperature Data Comparison</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
@@ -49,7 +51,7 @@
                 <div class="container mt-5">
                     <?php
                     // Include the logic file
-                    include 'test.php';
+                    include 'logic.php';
 
                     // Get the temperature comparison data
                     $data = getTemperatureComparisonData();
