@@ -1,3 +1,29 @@
+/**
+ * This is the landing page for the Delaware Temperature Data Comparison application.
+ * 
+ * The page displays a comparison of temperature data between the years 1950 - 2018 and the year 2018.
+ * It includes a table that shows the month, temperature data for 1950 - 2018, temperature data for 2018, 
+ * and the difference between these two values.
+ * 
+ * The page uses Bootstrap for styling and includes a custom stylesheet 'style.css'.
+ * 
+ * PHP is used to include a logic file 'test.php' which provides the temperature comparison data.
+ * The data is then looped through and displayed in the table.
+ * 
+ * The total difference in temperature is displayed at the bottom of the table.
+ * 
+ * @file landing.php
+ * @package DelawareTemperatureComparison
+ * @version 1.0
+ * 
+ * @author Kyle Stranick
+ * @copyright Kyle Stranick
+ * 
+ * @link https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css Bootstrap CSS
+ * @link style.css Custom stylesheet
+ * 
+ * @see test.php Logic file for temperature comparison data
+ */
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,12 +57,13 @@
                     $total_diff = $data['total_diff'];
 
                     // Loop through comparison data to display it
+                    // echo is used to create a table row for each month
                     foreach ($comparison as $row) {
                         echo "<tr>";
-                        echo "<td>{$row['month']}</td>";
-                        echo "<td>{$row['temp_1950_2018']}</td>";
-                        echo "<td>{$row['temp_2018']}</td>";
-                        echo "<td>{$row['diff']}</td>";
+                        echo "<td>{$row['month']}</td>"; // Display month
+                        echo "<td>{$row['temp_1950_2018']}</td>"; // Display temperature data for 1950 - 2018
+                        echo "<td>{$row['temp_2018']}</td>"; // Display temperature data for 2018
+                        echo "<td>{$row['diff']}</td>"; // Display difference in temperature
                         echo "</tr>";
                     }
                     ?>
